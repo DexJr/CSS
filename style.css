@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* L'étoile donne du style à tous les éléments */
+*
+
+body{
+  background: url(./images/bg.jpg)  no-repeat center/cover;
+  /* VH = 100% de la taille de l'écran du user */
+  min-height: 100vh;
+}
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.2rem;
+  color: greenyellow;
+  text-shadow: 3px 2px 8px #000000a3;
+  font-family: "Open Sans", sans-serif;
+}
+
+main{
+  min-height: 500px;
+  width: 90%;
+  background: rgba(176, 196, 222, 0.443);
+  margin: 0 auto;
+  border: 3px solid lightgreen;
+  border-radius: 20px;
+  box-shadow: 0 0 7px 2px lightgreen;
+  padding: 15px;
+}
+
+h2{
+  margin: 0;
+}
+/* Le flexbox sert a répartir des éléments sur la page */
+.flexbox, .grid, .absolute{
+  min-height: 150px;
+  border: 2px solid lightpink;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.flexbox ul{
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flexbox li{
+  list-style: none;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  background: lightgoldenrodyellow;
+/* Centrer un unique élément verticalement et horizontalement */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.grid img{
+  width: 60%;
+  margin-top: 10px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "i1 i2"
+  "ta ta"
+  "vi bt";
+}
+
+input, textarea{
+  margin: 5px;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea{
+  grid-area: ta;
+}
+
+#btn-submit{
+  grid-area: bt;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#btn-submit:hover{
+  background: gold;
+}
+
+/* Aboslute */
+.circle1{
+  height: 80px;
+  width: 80px;
+  background: skyblue;
+  position: absolute;
+  border-radius: 150px;
+  top: 0;
+  right: 0;
+}
