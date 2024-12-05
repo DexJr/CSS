@@ -60,8 +60,9 @@ align-items: center;
 }
 
 .grid img{
-  width: 60%;
-  margin-top: 10px;
+  width: 80%;
+  margin: 20px auto;
+  display: block;
 }
 
 .grid-container{
@@ -103,6 +104,9 @@ textarea{
 }
 
 /* Aboslute */
+.absolute{
+  position: relative;
+}
 .circle1{
   height: 80px;
   width: 80px;
@@ -111,4 +115,40 @@ textarea{
   border-radius: 150px;
   top: 0;
   right: 0;
+}
+
+#circle2{
+  height: 80px;
+  width: 80px;
+  background: lightcoral;
+  position: absolute;
+  border-radius: 150px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media screen and (max-width: 720px){
+  .grid-container{
+    display: block;
+  }
+  .grid-container img{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 510px){
+  .flexbox ul{
+    flex-direction: column;
+    align-items: center;
+  }
+  form{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "i1"
+    "i2"
+    "ta"
+    "bt"
+    ;
+  }
 }
